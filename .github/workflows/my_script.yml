@@ -1,0 +1,14 @@
+name: expect-command-on-github-actions
+on: [push]
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      run |
+        sudo apt-get -y expect
+        expect -c "
+          spawn sudo update-alternatives --config x-www-browser
+          expect \"selection number: \"
+          send 2\
+          expect":
+    
