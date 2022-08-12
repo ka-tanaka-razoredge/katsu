@@ -10,5 +10,5 @@ jobs:
           spawn sudo update-alternatives --config x-www-browser
           expect \"selection number: \"
           send 2\n
-          expect":
+          expect"
     
