@@ -4,10 +4,10 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
-      run: |
-        sudo apt install -y expect
-        expect -c "
-          spawn sudo update-alternatives --config x-www-browser
-          expect \"selection number: \"
-          send 2\n
-          expect"
+      - run: |
+          sudo apt install -y expect
+          expect -c "
+            spawn sudo update-alternatives --config x-www-browser
+            expect \"selection number: \"
+            send 2\n
+            expect"
